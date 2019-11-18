@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>.GoGo Kids! Go!</title>
+    <link rel="stylesheet" href="style-kids.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="menu-box">
+    <div class="menu-container">
+        <div class="drop hidden">
+            <a href="#">Startside</a>
+        </div>
+
+        <div class="dropped">
+            <div class="out">
+                <div class="in hvr-buzz">
+                    <span>Ha en fin dag!</span>
+                    <div class="form-wrapper">
+                        <i class="fa fa-search"></i>
+                        <form method="get" action="https://www.google.com/search">
+                        <input autocomplete="off" autofocus="autofocus" class="google" type="text" name="q" size="31" value="">
+                        </form>
+                    </div>
+                    <a href="https://trondheim.itslearning.com/Index.aspx">itslearning</a>
+                    <a href="http://nrksuper.no">NRK Super</a>
+                    <a href="http://youtube.com">YouTube</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="drop hvr-pop">
+            <a href="#">Elias</a>
+        </div>
+
+        <div class="dropped">
+            <div class="out">
+                <div class="in hvr-buzz">
+                    <span>Du er kul, Elias!</span>
+                    <a href="http://google.no">Google</a>
+                    <a href="http://tv2.no/sporten">TV2 Sporten</a>
+                    <a href="http://adressa.no">Adressa</a>
+                    <a href="hhtp://mail.one.com">E-post</a>
+                    <a href="http://fotball2001.utleira.no/">Utleira G01</a>
+                    <a href="http://nrksuper.no">NRK Super</a>
+                    <a href="http://youtube.com/">YouTube</a>
+                    <a href="http://www.chelseafc.com/">Chelsea</a>
+                    <a href="https://trondheim.itslearning.com/Index.aspx">itslearning</a>
+                 </div>
+            </div>
+        </div>
+
+        <div class="drop hvr-pop">
+            <a href="#">Lavrans</a>
+        </div>
+
+        <div class="dropped">
+            <div class="out">
+                <div class="in hvr-buzz">
+                    <span>Du er rå, Lavrans!</span>
+                    <a href="http://google.no">Google</a>
+                    <a href="http://tv2.no/sporten">TV2 Sporten</a>
+                    <a href="http://fotball2005g.utleira.no/">Utleira G05</a>
+                    <a href="http://123spill.no/">123 spill</a>
+                    <a href="http://nrksuper.no">NRK Super</a>
+                    <a href="http://youtube.com/">YouTube</a>
+                    <a href="http://www.chelsea.no/">Chelsea.no</a>
+                    <a href="https://trondheim.itslearning.com/Index.aspx">itslearning</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="drop hvr-pop">
+            <a href="#">Ebba</a>
+        </div>
+
+        <div class="dropped">
+            <div class="out">
+                <div class="in hvr-buzz">
+                    <span>Du er flink, Ebba!</span>
+                    <a href="https://trondheim.itslearning.com/Index.aspx">itslearning</a>
+                    <a href="http://marcusandmartinus.no/">Marcus & Martinus</a>
+                    <a href="http://www.moviestarplanet.no/">Moviestarplanet</a>
+                    <a href="http://123spill.no/">123 spill</a>
+                    <a href="http://nrksuper.no">NRK Super</a>
+                    <a href="http://youtube.com/">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('.dropped').hide();
+    $('.dropped:first').show();
+    $('.drop').on('click', function(event) {
+        $('.drop').removeClass('active');
+        $(this).addClass('active');
+    var $toggleMenu = $(this).next('.dropped');
+    $('.dropped').not($toggleMenu).hide();
+    $toggleMenu.toggle();
+
+});
+
+</script>
+</body>
+
+</html>
+

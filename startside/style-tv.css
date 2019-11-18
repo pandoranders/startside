@@ -1,0 +1,190 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,800);
+
+*
+ {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
+    cursor:url('http://startside.dyrehagen.org/img/eye3.png') 64 64, auto;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: url("./img/bg-tv.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	height: 100%;
+
+}
+
+input,
+select
+ {
+    appearance: none;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-o-appearance: none;
+	border-radius: 0;
+}
+
+.form-wrapper {
+    width: 50%;
+    max-width: 800px;
+    margin: 0 auto;
+        border-bottom: 5px solid #FFF;
+            padding: 10px;
+            display: table;
+                margin-bottom: 30px;
+}
+
+.form-wrapper i{
+    width: 10%;
+    display: table-cell;
+    float: left;
+    margin-top: 14px;
+    text-align: center;
+}
+
+
+input.google {
+    font-size: 60px;
+    width: 90%;
+    font-weight: 800;
+    text-align: left;
+    max-width: 800px;
+    outline: none;
+    border:0;
+    color: #FFF;
+    background: transparent;
+    float: left;
+    padding-left: 30px;
+}
+
+
+input.google:focus {
+    outline: 0;
+    border: 0;
+
+}
+
+::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.6);
+   font-weight: 300;
+
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgba(255,255,255,0.6);
+   font-weight: 300;
+
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgba(255,255,255,0.6);
+   font-weight: 300;
+
+}
+
+:-ms-input-placeholder {  
+   color: rgba(255,255,255,0.6);
+   font-weight: 300;
+}
+
+
+strong {
+    font-weight: 800;
+}
+
+.menu-box {
+    background: rgba(37,0,48,0.63);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.menu-container {
+    width: 90%;
+    margin: 0 auto;
+    height: 120px;
+    position: relative;
+    display: table;
+    vertical-align: middle;
+}
+
+.out {
+    height: 100%;
+    width: 100%;
+    display: table;
+    vertical-align: middle;
+}
+
+.in {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+
+.drop a {
+    text-align: center;
+    font-size: 20px;
+    line-height: 120px;
+    color: #FFF;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: table-cell;
+    width: 33.3%;
+    float: left;
+    height: 120px;
+    vertical-align: middle;
+} 
+
+.dropped {
+    display: block;
+    position: fixed;
+    color: #FFF;
+    text-align: center;
+    padding: 80px 30px;
+    top: 0px;
+    left: 0;
+    right: 0;
+    bottom: 120px;
+    z-index: 100;
+    font-size: 60px;
+    font-weight: 800;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.dropped a {
+    color: #FFF;
+    font-weight: 800;
+    display: inline-block;
+    padding: 20px 40px;
+    margin: 10px 0;
+    border: 5px solid transparent;
+    text-decoration: none;
+}
+
+.dropped a:hover {
+    border: 5px solid #FFF;
+    cursor:url('http://startside.dyrehagen.org/img/eye1.png') 64 64, auto;
+}
+
+ 
+.drop [accesskey]:before {
+    display: none;
+}
