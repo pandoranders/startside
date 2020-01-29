@@ -34,6 +34,10 @@ body {
     height: 100%;
 }
 
+body.dark-mode {
+  background: #26262c;
+}
+
 input,
 select {
     appearance: none;
