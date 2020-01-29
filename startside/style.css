@@ -102,7 +102,7 @@ a {
 }
 
 .dark-mode .drop {
-  border: 20px solid #121212;
+	border: 2px solid #ff0000;
 }
 
 .drop img {
