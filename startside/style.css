@@ -47,7 +47,7 @@ select {
     border-radius: 0;
 }
 
-.quick-links {
+a.quick-links {
     position: absolute;
     left: -10000px;
     top: auto;
@@ -56,7 +56,7 @@ select {
     overflow: hidden;
 }
 
-.quick-links:focus {
+a.quick-links:focus {
     width: auto;
     height: auto;
     overflow: visible;
