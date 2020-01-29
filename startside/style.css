@@ -47,7 +47,7 @@ select {
   display: none;
 }
 
-.quick-links a:focus {
+a.quick-links:focus {
   display: block;
 }
 
@@ -58,6 +58,7 @@ a {
     font-size: 22px;
     cursor: pointer;
     border: 4px solid transparent;
+    outline: none;
 }
 
 .logo {
