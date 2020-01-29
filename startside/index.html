@@ -63,6 +63,7 @@
             <a href="https://www.dribbble.com">Dribbble</a>
             <a href="https://kreativtforum.no/">Kreativt forum</a>
             <a href="https://kampanje.com/">Kampanje</a>
+            <a class="toggleDarkMode" onclick="darkMode()">On/off</div>
         </div>
     </div>
 </div>
@@ -73,6 +74,11 @@
         $('.dropped').slideToggle(100);
         $(this).toggleClass('open');
     });
+
+    function darkMode() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
 </script>
 
 </body>
