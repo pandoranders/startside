@@ -43,6 +43,14 @@ select {
     border-radius: 0;
 }
 
+.quick-links a {
+  display: none;
+}
+
+.quick-links a:focus {
+  display: block;
+}
+
 a {
     text-decoration: none;
     color: rgba(255,255,255,1);
