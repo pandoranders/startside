@@ -101,6 +101,10 @@ a {
     border: 20px solid #FFF;
 }
 
+.dark-mode .drop {
+  border: 20px solid #121212;
+}
+
 .drop img {
     max-height: 50px;
     width: auto;
