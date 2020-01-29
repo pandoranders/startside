@@ -1,9 +1,9 @@
 @font-face {
-	font-family: 'GothamRnd-Bold';
-	src: url('fonts/GothamRnd-Bold.eot');
-	src: local('☺'), url('fonts/GothamRnd-Bold.woff') format('woff'), url('fonts/GothamRnd-Bold.ttf') format('truetype'), url('fonts/GothamRnd-Bold.svg') format('svg');
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'GothamRnd-Bold';
+    src: url('fonts/GothamRnd-Bold.eot');
+    src: local('☺'), url('fonts/GothamRnd-Bold.woff') format('woff'), url('fonts/GothamRnd-Bold.ttf') format('truetype'), url('fonts/GothamRnd-Bold.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 /* @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,800); */
@@ -43,12 +43,15 @@ select {
     border-radius: 0;
 }
 
-.quick-links a {
-  display: none;
+a.quick-links {
+    display: none
 }
 
 a.quick-links:focus {
-  display: block;
+    display: block;
+    padding: 30px;
+    background: #FFFFFF;
+    color: #222222;
 }
 
 a {
@@ -80,7 +83,7 @@ a {
     z-index: 100;
     bottom: 0;
     left: 0;
-        border: 20px solid #FFF;
+    border: 20px solid #FFF;
 }
 
 .drop img {
@@ -189,25 +192,27 @@ a {
 }
 
 .hvr-buzz a {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
 }
-.hvr-buzz a:hover, .hvr-buzz a:focus, .hvr-buzz a:active,
+.hvr-buzz a:hover, 
+.hvr-buzz a:focus, 
+.hvr-buzz a:active,
 .drop > img:hover {
-  -webkit-animation-name: hvr-buzz;
-  animation-name: hvr-buzz;
-  -webkit-animation-duration: 0.15s;
-  animation-duration: 0.15s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
+    -webkit-animation-name: hvr-buzz;
+    animation-name: hvr-buzz;
+    -webkit-animation-duration: 0.15s;
+    animation-duration: 0.15s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
 }
 
 
@@ -317,25 +322,25 @@ a {
 }
 
 .drop > img {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -moz-osx-font-smoothing: grayscale;
-  cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    cursor: pointer;
 }
 .drop > img {
-  -webkit-animation-name: hvr-buzz-out;
-  animation-name: hvr-buzz-out;
-  -webkit-animation-duration: 0.75s;
-  animation-duration: 0.75s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
+    -webkit-animation-name: hvr-buzz-out;
+    animation-name: hvr-buzz-out;
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
 }
 
 
