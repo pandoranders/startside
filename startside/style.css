@@ -38,6 +38,10 @@ body.dark-mode {
   background: #26262c;
 }
 
+body.boss-key {
+  background: red;
+}
+
 input,
 select {
     appearance: none;
