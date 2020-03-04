@@ -17,7 +17,8 @@
     padding: 0;
     margin: 0;
     list-style: none;
-    font-family:'GothamRnd-Bold',Sans-Serif;
+	font-family:'GothamRnd-Bold',Sans-Serif;
+	transition: all 0.15s ease;
 }
 
 html {
@@ -145,7 +146,8 @@ a {
     font-size: 40px;
     padding: 15px 30px;
     z-index: 8888;
-    position: relative;
+	position: relative;
+	opacity: 0.5;
 }
 
 .all {
@@ -158,13 +160,18 @@ a {
     font-size: 22px;
     padding: 10px 20px;
     display: block !important;
-    z-index: 999;
+	z-index: 999;
+	opacity: 0.5;
 }
 
 .drop img {
     position: fixed;
     left: 60px;
     top: 120px;
+}
+
+a:hover {
+	opacity: 1;
 }
 
 .drop:hover {
@@ -185,8 +192,8 @@ a {
 	position: fixed;
 	right: 60px;
 	top: 60px;
-	z-index: 10066;
-	opacity: 0.3;
+	z-index: 101;
+	opacity: 0.5;
 }
 
 .logo:hover {
@@ -231,8 +238,7 @@ a {
 }
 .hvr-buzz a:hover, 
 .hvr-buzz a:focus, 
-.hvr-buzz a:active,
-.drop > img:hover {
+.hvr-buzz a:active {
     -webkit-animation-name: hvr-buzz;
     animation-name: hvr-buzz;
     -webkit-animation-duration: 0.15s;
@@ -347,28 +353,6 @@ a {
     -webkit-transform: translateX(-1px) rotate(0);
     transform: translateX(-1px) rotate(0);
   }
-}
-
-.drop > img {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    cursor: pointer;
-}
-.drop > img {
-    -webkit-animation-name: hvr-buzz-out;
-    animation-name: hvr-buzz-out;
-    -webkit-animation-duration: 0.75s;
-    animation-duration: 0.75s;
-    -webkit-animation-timing-function: linear;
-    animation-timing-function: linear;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
 }
 
 .drop img:hover {
