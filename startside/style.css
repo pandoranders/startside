@@ -35,11 +35,11 @@ body {
 }
 
 body.dark-mode {
-  background: #26262c;
+	background: #26262c;
 }
 
 body.boss-key {
-  background: red;
+	background: red;
 }
 
 input,
@@ -80,18 +80,6 @@ a {
     cursor: pointer;
     border: 4px solid transparent;
     outline: none;
-}
-
-.logo {
-    position: fixed;
-    top: 40px;
-    left: 40px;
-    z-index: 100;
-}
-
-.logo img {
-    max-height: 50px;
-    width: auto;
 }
 
 .drop {
@@ -174,8 +162,8 @@ a {
 
 .drop img {
     position: fixed;
-    right: 40px;
-    top: 40px;
+    left: 60px;
+    top: 120px;
 }
 
 .drop:hover {
@@ -184,6 +172,19 @@ a {
 
 .drop.open {
     z-index: 9999;
+}
+
+
+.logo {
+	background: url("./img/pandoranders-new-30.png") no-repeat center center;
+	background-size: contain;
+	height: 200px;
+	width: 125px;
+	display: block;
+	position: fixed;
+	right: 60px;
+	top: 60px;
+	z-index: 100;
 }
 
 
