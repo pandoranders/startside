@@ -96,8 +96,9 @@ a {
 }
 
 .drop img {
-    max-height: 50px;
-    width: auto;
+    max-height: 100%;
+	width: auto;
+	opacity: 0.4;
 }
 
 .dropped {
@@ -176,7 +177,7 @@ a {
 
 
 .logo {
-	background: url("./img/pandoranders-new-30.png") no-repeat center center;
+	background: url("./img/pandoranders-new.png") no-repeat bottom center;
 	background-size: contain;
 	height: 200px;
 	width: 125px;
@@ -184,7 +185,12 @@ a {
 	position: fixed;
 	right: 60px;
 	top: 60px;
-	z-index: 100;
+	z-index: 10066;
+	opacity: 0.3;
+}
+
+.logo:hover {
+	opacity: 1;
 }
 
 
@@ -365,6 +371,10 @@ a {
     animation-iteration-count: 1;
 }
 
+.drop img:hover {
+	opacity: 1;
+}
+
 
 @media (max-width: 500px) {
     .fav a {
@@ -397,7 +407,7 @@ a {
     }
 
     .drop img {
-        max-height: 30px;
+        max-height: 60px;
         top: 10px;
         right: 10px;
     }
