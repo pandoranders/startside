@@ -18,7 +18,6 @@
     margin: 0;
     list-style: none;
 	font-family:'GothamRnd-Bold',Sans-Serif;
-	transition: all 0.15s ease;
 }
 
 html {
@@ -148,6 +147,7 @@ a {
     z-index: 8888;
 	position: relative;
 	opacity: 0.5;
+	transition: all 0.15s ease;
 }
 
 .all {
@@ -162,12 +162,14 @@ a {
     display: block !important;
 	z-index: 999;
 	opacity: 0.5;
+	transition: all 0.15s ease;
 }
 
 .drop img {
     position: fixed;
     left: 60px;
-    top: 120px;
+	top: 120px;
+	transition: all 0.15s ease;
 }
 
 a:hover {
@@ -194,6 +196,7 @@ a:hover {
 	top: 60px;
 	z-index: 101;
 	opacity: 0.5;
+	transition: all 0.15s ease;
 }
 
 .logo:hover {
