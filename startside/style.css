@@ -155,7 +155,7 @@ a {
 
 .all a {
 	font-size: 22px;
-	padding: 10px 20px;
+	padding: 0px;
 	display: block !important;
 	z-index: 999;
 	opacity: 0.5;
@@ -190,6 +190,23 @@ a:hover {
 .drop.open {
 	z-index: 9999;
 }
+
+.drop.open .outer {
+    display: inherit;
+}
+
+.drop.open .outer .inner {
+    text-align: left;
+    display: block;
+}
+
+.drop.open .all {
+    column-count: inherit;
+    width: inherit;
+    text-align: left;
+}
+
+
 
 
 .logo {
