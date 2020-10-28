@@ -46,15 +46,7 @@ body.boss-key {
 	background: red;
 }
 
-body.iwmac-key .iwmac {
-	display: table;
-}
-
 body.iwmac-key .outer {
-	display: none;
-}
-
-.iwmac {
 	display: none;
 }
 
@@ -123,13 +115,24 @@ a {
 	padding: 30px;
 }
 
-.outer,
-.iwmac {
+.outer {
 	height: 100%;
 	width: 100%;
 	display: table;
 	vertical-align: middle;
 }
+
+.iwmac {
+	display: none;
+}
+
+body.iwmac-key .iwmac {
+	height: 100%;
+	width: 100%;
+	display: table;
+	vertical-align: middle;
+}
+
 
 .inner {
 	display: table-cell;
