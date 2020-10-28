@@ -47,7 +47,7 @@ body.boss-key {
 }
 
 body.iwmac-key .iwmac {
-	display: block;
+	display: table;
 }
 
 body.iwmac-key .outer {
