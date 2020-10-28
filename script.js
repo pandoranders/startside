@@ -13,3 +13,8 @@ function bossKey() {
    var element = document.body;
    element.classList.toggle("boss-key");
 }
+
+function iwmacKey() {
+   var element = document.body;
+   element.classList.toggle("iwmac-key");
+}

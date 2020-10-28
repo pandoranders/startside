@@ -46,6 +46,14 @@ body.boss-key {
 	background: red;
 }
 
+body.iwmac-key .iwmac {
+	display: block;
+}
+
+.iwmac {
+	display: none;
+}
+
 input,
 select {
 	appearance: none;
