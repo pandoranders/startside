@@ -108,7 +108,7 @@ a {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 350px;
+	right: 0;
 	bottom: 0;
 	z-index: 10;
 	display: none;
@@ -155,7 +155,7 @@ body.iwmac-key .iwmac {
 }
 
 .fav a {
-	font-size: 40px;
+	font-size: 36px;
 	padding: 15px 30px;
 	z-index: 8888;
 	position: relative;
@@ -172,7 +172,6 @@ body.iwmac-key .iwmac {
 .all a {
 	font-size: 22px;
 	padding: 0px;
-	display: block !important;
 	z-index: 999;
 	opacity: 0.5;
 	transition: all 0.15s ease;
