@@ -198,6 +198,10 @@ a:hover {
 	opacity: 1;
 }
 
+.fav a:focus {
+	text-decoration: underline;
+}
+
 .drop:hover {
 	cursor: pointer;
 }
