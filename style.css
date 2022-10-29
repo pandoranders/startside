@@ -30,7 +30,8 @@ html {
 }
 
 body {
-	background: #292A2D url("./img/bg.png") no-repeat center center fixed;
+	/*background: #292A2D url("./img/bg.png") no-repeat center center fixed;*/
+	background: #292A2D url("./img/bg-scream.jpg") repeat center center center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
