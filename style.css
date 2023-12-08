@@ -123,11 +123,13 @@ a {
 	vertical-align: middle;
 }
 
-.iwmac {
+.iwmac,
+.concert {
 	display: none;
 }
 
-body.iwmac-key .iwmac {
+body.iwmac-key .iwmac,
+body.iwmac-key .concert {
 	height: 100%;
 	width: 100%;
 	display: table;
