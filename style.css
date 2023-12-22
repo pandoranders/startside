@@ -17,6 +17,10 @@
 	color: #FFF;
 }
 
+*:focus {
+	outline: 2px solid rgba(187,72,61, 1);							
+}
+
 html, body {
 	width: 100%;
 	height:100%;
@@ -40,14 +44,12 @@ select {
     background: rgba(187,72,61, 0.1);
     font-size: 28px;
     padding: 10px;
-	caret-color: rgba(187,72,61, 0.75);
-	caret-shape: currentcolor underscore;										
+	caret-color: rgba(187,72,61, 0.75);									
 }
 
 input,
 select {
-	border: 2px solid rgba(187,72,61, 1);
-	outline: none !important;
+	border: 2px solid rgba(187,72,61, 1);							
 }
 
 
@@ -58,9 +60,12 @@ a {
 	font-size: 50px;
 	line-height: 160%;
 	margin-right: 30px;
+	padding: 0 10px;
+	outline: none !important;
 }
 
-a:hover {
+a:hover,
+a:focus {
 	opacity: 1;
     color: #c0544c;
 }
@@ -125,6 +130,8 @@ a:hover {
 .google-search {
 		width: 510px;
 		margin-bottom: 30px;
+		margin-left: 16px;
+		display: none	;
 
 }
 
