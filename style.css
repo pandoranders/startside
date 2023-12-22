@@ -151,8 +151,14 @@ a:focus {
 
 
 @media (max-width: 900px) {
+
+	
 	.bg-element {
 		background: none;
+	}
+
+	a {
+		font-size: 30px;
 	}
 
 	.content {
