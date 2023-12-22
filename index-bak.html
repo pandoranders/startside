@@ -1,161 +1,75 @@
-<!DOCTYPE html>
-
-<head>
-    <meta charset="utf-8">
-    <title>.startside</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
-</head>
-
-<body>
-    <div class="menu-box">
-        <div class="menu-container">
-
-            <div class="drop hidden">
-                <a accesskey="1" href="#">Mest brukt</a>
-            </div>
-            <div class="dropped">
-                <div class="out">
-                    <div class="in">
-                        <a href="https://boostcomgroup.atlassian.net/secure/Dashboard.jspa" accesskey="J">ira</a>
-                        <a href="https://mcmp.mobi/boost/login" accesskey="M">CMS Admin</a>
-                        <a href="http://www.facebook.com" accesskey="F">acebook</a>
-                        <a href="http://www.twitter.com" accesskey="T">witter</a>
-                        <a href="http://adressa.no" accesskey="A">dressa</a>
-                        <a href="http://nrk.no" accesskey="N">rk</a>
-                        <a href="http://reddit.com" accesskey="R">eddit</a>
-                        <a href="http://www.dribbble.com">Dribbble</a>
-                        <a href="http://kreativtforum.no/">Kreativt forum</a>
-                        <a href="http://kampanje.com/">Kampanje</a>
-                    </div>
+<a href="#concert" onclick="bossKey()" class="quick-links" aria-keyshortcuts="c">Concerts (c)</a>
+<a href="#bosskey" onclick="bossKey()" class="quick-links" aria-keyshortcuts="b">Bosskey (b)</a>
+<a href="#iwmac" onclick="iwmacKey()" class="quick-links" accesskey="i">IWMAC (i)</a>
+<a href="#darkmode" onclick="darkMode()" class="quick-links" accesskey="o">Dark on/off (o)</a>
+<div class="logo"></div>
+<div class="drop"><img class="" src="./img/menu.png">
+    <div class="dropped">
+        <div class="outer">
+            <div class="inner">
+                <div class="container row all">
+                    <a href="https://vepsen.no">Vepsen</a>
+                    <a href="https://tv2.no/">TV2</a>
+                    <a href="https://kreativtforum.no/">Kreativt forum</a>
+                    <a href="https://kampanje.com/">Kampanje</a>
+                    <a href="https://wallhaven.cc">Wallhaven</a>
+                    <a href="https://arty.name/woff2otf/">WOFF2OTF</a>
+                    <a href="https://anders.dyrehagen.org">Anders</a>
+                    <a href="https://oppskrift.klikk.no/tynn-italiensk-pizza/4984/">Pizza</a>
                 </div>
-            </div>
-
-            <div class="drop">
-                <a accesskey="2" href="#">Jobb</a>
-            </div>
-            <div class="dropped">
-                <div class="out">
-                    <div class="in">
-                        <a href="https://mcmp.mobi/admin/login">MCMS</a>
-                        <a href="https://staging.mcmp.mobi/boost">CMS Staging</a>
-                        <a href="http://resources.mcmp.no/scripts/form/csv.php?admin=kevin">Feedback</a>
-                        <a href="http://resources.mcmp.no/services/subdir/">Subdir</a>
-                        <a href="http://resources.mcmp.no/scripts/varnishpurge/">Varnish</a>
-                        <a href="http://resources.mcmp.no/services/arabic/">Arabic</a>
-                        <a href="http://resources.mcmp.no/services/eventadmin/login.php">Event admin</a>
-                        <a href="https://secure.boostcom.net/merger/">SMS merger</a>
-                        <a href="https://secure.boostcom.net/smsfusion/">SMS Fusion</a>
-                        <a href="https://marvelapp.com">Marvelapp</a>
-                        <a href="http://whosoff.com/">WhosOff</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="drop">
-                <a accesskey="3" href="#">Diverse</a>
-            </div>
-            <div class="dropped">
-                <div class="out">
-                    <div class="in">
-                        <a href="http://utleira.no">Utleira</a>
-                        <a href="http://finn.no">Finn</a>
-                        <a href="http://wallhaven.cc">Wallhaven</a>
-                        <a href="https://arty.name/woff2otf/">WOFF2OTF</a>
-                        <a href="http://www.dribbble.com">Dribbble</a>
-                        <a href="http://anders.dyrehagen.org">Anders</a>
-                        <a href="http://oppskrift.klikk.no/tynn-italiensk-pizza/4984/">Pizza</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="drop">
-                <a accesskey="4" href="#">Mobil</a>
-            </div>
-            <div class="dropped">
-                <div class="out">
-                    <div class="in">
-                        <a href="#">Menu</a>
-                        <a href="#">Menu</a>
-                        <a href="#">Menu</a>
-                        <a href="#">Menu</a>
-                        <a href="#">Menu</a>
-                        <a href="#">Menu</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="drop">
-                <a accesskey="5" href="#">Nyheter</a>
-            </div>
-             <div class="dropped">
-                 <div class="out">
-                    <div class="in">
-                        <a href="http://adressa.no">Adressa</a>
-                        <a href="http://vepsen.no">Vepsen</a>
-                        <a href="http://vg.no" accesskey="V">G</a>
-                        <a href="http://dagbladet.no" accesskey="D">agbladet</a>
-                        <a href="http://nrk.no/">NRK</a>
-                        <a href="http://tv2.no/">TV2</a>
-                        <a href="http://kreativtforum.no/">Kreativt forum</a>
-                        <a href="http://kampanje.com/">Kampanje</a>
-                        <a href="http://reddit.com/">Reddit</a>
-                    </div>
-                 </div>
             </div>
         </div>
     </div>
-
-    <!--div id="out">
-        <div id="in">
-            <div class="fav-box">
-                 <a href="http://jira.boost.no/secure/RapidBoard.jspa?rapidView=49" accesskey="J">Jira</a>
-                <a href="https://mcmp.mobi/boost/login" accesskey="M">MCMS Admin</a>
-                <a href="http://www.facebook.com" accesskey="F">Facebook</a>
-            </div>
-              <div class="fav-box">
-                <a href="http://adressa.no" accesskey="A">Adressa</a>
-                <a href="http://vg.no" accesskey="V">VG</a>
-                <a href="http://dagbladet.no" accesskey="D">Dagbladet</a>
-                <a href="http://reddit.com" accesskey="R">Reddit</a>
-            </div>
+</div>
+<div class="concert">
+    <div class="inner">
+        <div class="container row fav">
+            <a href="https://verkstedhallen.hoopla.no/">Verkstedhallen</a>
+            <a href="https://byscenen.no/">Byscenen</a>
+            <a href="https://www.barmoskus.no/konserter">Moskus</a>
+            <a href="https://trykkerietscene.hoopla.no/">Trykkeriet</a>
+            <a href="https://www.lokal.bar/">Lokal</a>  
+            <a href="https://frulundgreen.no/">Lundgreens</a>               
+            <a href="https://dokkhuset.no/">Dokkhuset</a>
+            <a href="https://www.havetarena.no/events">Havet Arena</a>
         </div>
-    </div-->
+    </div>
+</div>
 
-
-<script>
-    $('.dropped').hide();
-    $('.dropped:first').show();
-    $('.drop').on('click', function(event) {
-        $('.drop').removeClass('active');
-        $(this).addClass('active');
-    var $toggleMenu = $(this).next('.dropped');
-    $('.dropped').not($toggleMenu).hide();
-    $toggleMenu.toggle();
-
-
-});
-
-
-
-</script>
-<!--script>
-    $('.dropped').not('.open').hide();
-    $('.drop > a').on('click', function() {
-    $(this).parent('.drop').find('.dropped').toggle();
-    $(this).parent('.drop').toggleClass('active');
-	});
-
-
-
-	   $('.drop').removeClass('active');
-        $(this).addClass('active');
-
-
-</script-->
-
+<div class="iwmac">
+    <div class="inner">
+        <div class="container row fav">
+            <a href="https://iwmactech1.atlassian.net/secure/RapidBoard.jspa?projectKey=PUI&rapidView=72">PUI Board</a>
+            <a href="https://iwmactech1.atlassian.net/wiki/spaces/FOR/pages">FU</a>
+            <a href="https://v5.iwmac.net/demoui/">Demo UI</a>
+            <a href="https://iwmactech1.atlassian.net/wiki/spaces/HIG2/overview">IWMAC HIG</a>
+        </div>
+    </div>
+</div>
+<div class="outer">
+    <div class="inner">
+        <div class="container row fav">
+            <a href="https://www.reddit.com">Reddit</a>
+            <a href="https://www.twitch.tv">Twitch</a>
+            <a href="https://youtube.com">YouTube</a>
+            <a href="http://hbomax.com">HBO Max</a>
+            <a href="http://netflix.com">Netflix</a>
+            <a href="https://adressa.no">Adressa</a>
+            <a href="https://nrk.no">Nrk</a>
+            <a href="https://vg.no">VG</a>
+            <a href="https://dagbladet.no">Dagbladet</a>
+            <a href="http://klassekampen.no">Klassekampen</a>
+            <a href="http://nettavisen.no">Nettavisen</a>
+            <a href="https://tek.no">Tek.no</a>
+            <a href="https://gamer.no">Gamer.no</a>
+            <a href="https://www.dribbble.com">Dribbble</a>
+            <a href="https://kreativtforum.no/">Kreativt forum</a>
+            <a href="https://kampanje.com/">Kampanje</a>
+            <a href="https://finn.no">Finn</a>
+            <a href="https://web.trondelagfylke.no/strinda-videregaende-skole">Strinda</a>
+            <a href="http://strinda-vgs.inschool.visma.no/">ViS</a>
+            <a href="https://docs.google.com/document/d/10PiHne7Nd1c4YF37wCswh8Bpm3XLSfr6gs4PapFzYB8/edit">The Document</a>
+        </div>
+    </div>
+</div>
 </body>
-
-</html>
-
