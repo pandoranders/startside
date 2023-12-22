@@ -136,11 +136,6 @@ a:focus {
 }
 
 
-@media (min-width: 1200px) {
-
-}
-
-
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -151,4 +146,15 @@ a:focus {
     100% {
         background-position: 0% 50%;
     }
+}
+
+
+@media (max-width: 1200px) {
+	.bg-element {
+		background: none;
+	}
+
+	.content {
+		padding: 30px 60px 0;
+	}
 }
