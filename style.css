@@ -12,6 +12,7 @@
 	font-family: 'DM Mono', monospace;
 	font-weight: 400;
 	letter-spacing: 3px;
+	font-size: 28px;
 }
 
 html, body {
@@ -65,7 +66,7 @@ a:hover {
 }
 
 .p-logo {
-	background: url("./img/pandoranders-new.png") no-repeat bottom center;
+	background: url("./img/p-logo.svg") no-repeat bottom center;
 	background-size: contain;
 	height: 150px;
 	width: 100px;
@@ -74,12 +75,21 @@ a:hover {
 	left: 60px;
 	top: 60px;
 	z-index: 101;
-	opacity: 0.5;
+	opacity: 0.7;
 	transition: all 0.15s ease;
 }
 
 .p-logo:hover {
 	opacity: 1;
+}
+
+.bg-element {
+		background: url(./img/bg-element.png) no-repeat bottom right;
+		height: 100vh;
+		width: 100vw;
+		position: fixed;
+		right: 0;
+
 }
 
 
