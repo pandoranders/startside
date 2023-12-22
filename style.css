@@ -10,22 +10,23 @@
 	margin: 0;
 	list-style: none;
 	font-family: 'DM Mono', monospace;
-	font-weight: 400;
+	font-weight: 300;
 	letter-spacing: 3px;
 	font-size: 28px;
     transition: all 0.15s ease;
+	color: #FFF;
 }
 
 html, body {
 	width: 100%;
 	height:100%;
+	overflow: hidden;
 }
 
 body {
 	background: radial-gradient(#2A113B, #1B1435, #2F1739, #2A113B);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
-	overflow: hidden; /* Hide scrollbars */
 }
 
 input,
@@ -41,13 +42,18 @@ a {
 	color: #AF443C;
 	text-decoration: none;
 	opacity: 0.75;
-	font-size: 60px;
+	font-size: 50px;
 	line-height: 160%;
+	margin-right: 30px;
 }
 
 a:hover {
 	opacity: 1;
     color: #c0544c;
+}
+
+.small a {
+	font-size: inherit;
 }
 
 .container {
@@ -57,7 +63,6 @@ a:hover {
     scroll-behavior: smooth;
     overflow: auto;
     scroll-snap-type: y mandatory;
-
 }
 
 .section {
@@ -73,13 +78,10 @@ a:hover {
 }
 
 .content {
-	justify-content: center;
-	max-width: 1980px;
-	padding: 0 10%;
-	margin:  auto;
+    justify-content: center;
+    max-width: 1980px;
+    padding: 30px 280px 0;
 }
-
-
 
 .p-logo {
     background: url(./img/p-logo.svg) no-repeat bottom center;
