@@ -31,12 +31,25 @@ body {
 
 input,
 select {
-	appearance: none;
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	-o-appearance: none;
-	border-radius: 0;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    border-radius: 0;
+    border: 2px solid rgba(187,72,61, 0.75);
+    background: rgba(187,72,61, 0.1);
+    font-size: 28px;
+    padding: 10px;
+	caret-color: rgba(187,72,61, 0.75);
+	caret-shape: currentcolor underscore;										
 }
+
+input,
+select {
+	border: 2px solid rgba(187,72,61, 1);
+	outline: none !important;
+}
+
 
 a {
 	color: #AF443C;
@@ -111,6 +124,7 @@ a:hover {
 
 .google-search {
 		width: 510px;
+		margin-bottom: 30px;
 
 }
 
