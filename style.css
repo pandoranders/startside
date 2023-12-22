@@ -36,7 +36,7 @@ select {
 }
 
 a {
-	color: #FFFFFF;
+	color: #AF443C;
 	text-decoration: none;
 }
 
@@ -57,26 +57,27 @@ a {
 }
 
 .content {
-	margin: 0 auto;
+	margin: 30px auto;
 	max-width: 80%;
 }
 
 a:hover {
 	opacity: 1;
+	color: #FFF;
 }
 
 .p-logo {
-	background: url("./img/p-logo.svg") no-repeat bottom center;
-	background-size: contain;
-	height: 150px;
-	width: 100px;
-	display: block;
-	position: fixed;
-	left: 60px;
-	top: 60px;
-	z-index: 101;
-	opacity: 0.7;
-	transition: all 0.15s ease;
+    background: url(./img/p-logo.svg) no-repeat bottom center;
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    display: block;
+    position: fixed;
+    left: 100px;
+    top: 100px;
+    z-index: 101;
+    opacity: 0.8;
+    transition: all 0.15s ease;
 }
 
 .p-logo:hover {
@@ -84,11 +85,11 @@ a:hover {
 }
 
 .bg-element {
-		background: url(./img/bg-element.png) no-repeat bottom right;
-		height: 100vh;
-		width: 100vw;
-		position: fixed;
-		right: 0;
+	background: url(./img/bg-element.png) no-repeat bottom right;
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	right: 0;
 
 }
 
