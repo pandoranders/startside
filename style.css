@@ -98,7 +98,7 @@ a:focus {
 .content {
     justify-content: center;
     max-width: 1980px;
-    padding: 30px 280px 0;
+    padding: 30px 230px 0px 230px;
 }
 
 .p-logo {
