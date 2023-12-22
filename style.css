@@ -13,6 +13,7 @@
 	font-weight: 400;
 	letter-spacing: 3px;
 	font-size: 28px;
+    transition: all 0.15s ease;
 }
 
 html, body {
@@ -24,6 +25,7 @@ body {
 	background: radial-gradient(#2A113B, #1B1435, #2F1739, #2A113B);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
+	overflow: hidden; /* Hide scrollbars */
 }
 
 input,
@@ -38,6 +40,14 @@ select {
 a {
 	color: #AF443C;
 	text-decoration: none;
+	opacity: 0.75;
+	font-size: 60px;
+	line-height: 160%;
+}
+
+a:hover {
+	opacity: 1;
+    color: #c0544c;
 }
 
 .container {
@@ -47,6 +57,7 @@ a {
     scroll-behavior: smooth;
     overflow: auto;
     scroll-snap-type: y mandatory;
+
 }
 
 .section {
@@ -54,17 +65,21 @@ a {
     height: 100vh;
     background-size:  cover;
     scroll-snap-align: start;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-content: center;
+	align-items: stretch;
 }
 
 .content {
-	margin: 30px auto;
-	max-width: 80%;
+	justify-content: center;
+	max-width: 1980px;
+	padding: 0 10%;
+	margin:  auto;
 }
 
-a:hover {
-	opacity: 1;
-	color: #FFF;
-}
+
 
 .p-logo {
     background: url(./img/p-logo.svg) no-repeat bottom center;
