@@ -15,6 +15,7 @@
 	font-size: 28px;
     transition: all 0.15s ease;
 	color: #FFF;
+	cursor:url('./img/cursor.png') 8 8, auto;
 }
 
 *:focus {
@@ -68,6 +69,7 @@ a:hover,
 a:focus {
 	opacity: 1;
     color: #c0544c;
+	cursor:url('./img/cursor_hover.png') 8 8, auto;
 }
 
 .small a {
