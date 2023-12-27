@@ -165,7 +165,7 @@ a:focus {
 	}
 	
 	.bg-element {
-		background: none;
+	
 	}
 
 	a, .small a {
@@ -177,7 +177,7 @@ a:focus {
 	}
 
 	.content {
-		padding: 20px 30px 20px 20px;
+		padding: 20px 30px 20px 30px;
 		width: 100%;
 	}
 
