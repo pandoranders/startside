@@ -156,16 +156,30 @@ a:focus {
 
 @media (max-width: 900px) {
 
+	.p-logo {
+		height: 50px;
+		width: 50px;
+		left: 30px;
+		top: 30px;
+		opacity: 1;
+	}
 	
 	.bg-element {
 		background: none;
 	}
 
-	a {
-		font-size: 30px;
+	a, .small a {
+		font-size: 20px;
+		letter-spacing: 1px;
+		padding: 0 2px;
+		opacity: 1;
+		margin-right: 6px;
 	}
 
 	.content {
-		padding: 30px 60px 0;
+		padding: 20px 30px 20px 20px;
+		width: 100%;
 	}
+
+
 }
