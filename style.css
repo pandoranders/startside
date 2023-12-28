@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
 
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #B3453C;
+    -webkit-border-radius: 0ex;
+}
+
 *
  {
 	box-sizing: border-box;
