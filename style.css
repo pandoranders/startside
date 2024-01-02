@@ -7,8 +7,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #B3453C;
-    -webkit-border-radius: 0ex;
+	background: #B3453C;
+	-webkit-border-radius: 0ex;
 }
 
 *
@@ -24,7 +24,7 @@
 	font-weight: 300;
 	letter-spacing: 3px;
 	font-size: 28px;
-    transition: all 0.15s ease;
+	transition: all 0.15s ease;
 	color: #FFF;
 	cursor:url('./img/cursor.png') 8 8, auto;
 }
@@ -41,8 +41,8 @@ html, body {
 
 body {
 	background: radial-gradient(#2A113B, #1B1435, #2F1739, #2A113B);
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
 }
 
 input,
@@ -163,7 +163,16 @@ a:focus {
     }
 }
 
+@media (max-width: 1200px) {
 
+	a {
+		font-size: 32px;
+	}
+
+	.small a {
+		font-size: 20px;
+	}
+}
 
 @media (max-width: 900px) {
 
@@ -173,10 +182,6 @@ a:focus {
 		left: 30px;
 		top: 30px;
 		opacity: 1;
-	}
-	
-	.bg-element {
-	
 	}
 
 	a, .small a {
@@ -191,6 +196,4 @@ a:focus {
 		padding: 20px 30px 20px 30px;
 		width: 100%;
 	}
-
-
 }
