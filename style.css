@@ -74,6 +74,7 @@ a {
 	margin-right: 30px;
 	padding: 0 0;
 	outline: none !important;
+	white-space: nowrap;
 }
 
 a:hover,
