@@ -4,7 +4,7 @@
 	background: transparent;
 }
 
-::-webkit-scrollbar 
+::-webkit-scrollbar {
     width: 8px;
     background: transparent;
 }
