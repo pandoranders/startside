@@ -83,8 +83,8 @@ a {
 a:hover,
 a:focus {
 	opacity: 1;
-    color: #c0544c;
-	cursor:url('./img/cursor_hover.png') 8 8, auto;
+    	color: #c0544c;
+
 }
 
 .small a {
