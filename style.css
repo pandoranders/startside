@@ -93,13 +93,14 @@ a:focus {
 
 .fixed-elements {
 	position: absolute;
-	right: 10px;
-	top: 110px;
-	font-size: 20px;
+	right: 100px;
+	top: 140px;
+	font-size: 22px;
 }
 
 .fixed-elements a {
 	font-size: 20px;
+	margin-right: 5px;
 }
 
 .container {
