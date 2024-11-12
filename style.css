@@ -96,6 +96,7 @@ a:focus {
 	right: 100px;
 	top: 140px;
 	font-size: 22px;
+	z-index: 999;
 }
 
 .fixed-elements a {
