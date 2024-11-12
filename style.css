@@ -100,8 +100,10 @@ a:focus {
 }
 
 .fixed-elements a {
-	font-size: 20px;
+	font-size: 18px;
 	margin-right: 5px;
+	text-transform: uppercase;
+	font-weight: 900;
 }
 
 .container {
