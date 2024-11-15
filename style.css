@@ -154,7 +154,8 @@ a:focus {
 }
 
 .bg-element {
-	background: url(./img/bg-element.png) no-repeat bottom right;
+	background: url(./img/bg-element-blobb.png) no-repeat center center;
+	background-size: cover;
 	height: 100vh;
 	width: 100vw;
 	position: fixed;
