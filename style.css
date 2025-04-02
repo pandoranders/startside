@@ -84,13 +84,13 @@ a:focus {
 }
 
 .fixed-elements {
+    display: flex;
     position: absolute;
-    left: 16px;
+    width: 100vw;
     top: 16px;
     font-size: 16px;
     z-index: 999;
     justify-content: center;
-    display: flex;
 }
 
 .fixed-elements a {
