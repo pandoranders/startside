@@ -25,7 +25,7 @@
 	list-style: none;
 	font-family: 'DM Mono', monospace;
 	font-weight: 300;
-	letter-spacing: 3px;
+	//letter-spacing: 3px;
 	font-size: 28px;
 	transition: all 0.15s ease;
 	color: #FFF;
@@ -93,17 +93,20 @@ a:focus {
 
 .fixed-elements {
 	position: absolute;
-	right: 100px;
-	top: 140px;
-	font-size: 22px;
+	left: 16px;
+	top: 16px;
+	font-size: 16px;
 	z-index: 999;
 }
 
 .fixed-elements a {
-	font-size: 18px;
-	margin-right: 5px;
+	font-size: 16px;
+	margin-right: 0;
 	text-transform: uppercase;
-	font-weight: 900;
+	font-weight: 400;
+	background: #AF443C;
+	color: #241736;
+	padding: 0 4px;
 }
 
 .container {
