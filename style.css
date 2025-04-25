@@ -80,7 +80,12 @@ a:focus {
 }
 
 .small a {
-    font-size: inherit;
+    background: #AF443c;
+    color: #241736;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    font-size: 24px;
 }
 
 .fixed-elements {
