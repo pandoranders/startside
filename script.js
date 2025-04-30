@@ -38,8 +38,8 @@ function showEasterEgg() {
 
 document.addEventListener('keydown', (e) => {
    const key = e.key.toLowerCase();
-   if (key === 'c') window.open("https://chatgpt.com", "_blank");
+   if (key === 'c') window.open("https://chatgpt.com");
    if (key === 's') showEasterEgg(); 
-   if (key === 'e') window.open("https://mail.one.com", "_blank");
+   if (key === 'e') window.open("https://mail.one.com");
 
  });
