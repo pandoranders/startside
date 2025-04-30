@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Anders sin Startside</title>
+  <style>
+    :root {
+      --bg-color: #1a0033;
+      --text-color: white;
+      --link-color: #FFDFFF;
+      --link-hover: #ffffff;
+    }
+
+    body.light {
+      --bg-color: #f2f2f2;
+      --text-color: #111;
+      --link-color: #6A0DAD;
+      --link-hover: #9B30FF;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      padding: 2rem;
+      overflow-x: hidden;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .clock {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .column h2 {
+      border-bottom: 2px solid var(--text-color);
+      padding-bottom: 0.5rem;
+    }
+
+    a {
+      display: block;
+      color: var(--link-color);
+      text-decoration: none;
+      margin: 0.5rem 0;
+      font-size: 1.1rem;
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    a:hover {
+      transform: scale(1.05);
+      color: var(--link-hover);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+
+    .easter-egg {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      opacity: 0.6;
+      transition: opacity 0.3s ease;
+    }
+
+    .easter-egg:hover {
+      opacity: 1;
+    }
+
+    .toggle-container {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: var(--bg-color);
+      color: var(--text-color);
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--text-color);
+      border-radius: 5px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .weather {
+      text-align: center;
+      margin: 2rem auto;
+      font-size: 1.2rem;
+    }
+
+    /* Retro-effekter */
+    body.retro::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: repeating-linear-gradient(
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.05) 3px,
+        rgba(0, 0, 0, 0.05) 4px
+      );
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    .retro-audio-toggle {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      background: var(--bg-color);
+      color: var(--text-color);
+      border: 1px solid var(--text-color);
+      border-radius: 5px;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      z-index: 1000;
+      display: none;
+    }
+
+    body.retro .retro-audio-toggle {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle-container" onclick="toggleTheme()">Bytt tema</div>
+
+  <h1>Velkommen til Anders sin Startside</h1>
+
+  <div class="clock" id="clock">Klokka lastes inn...</div>
+
+  <div class="weather" id="weather">Laster inn værdata...</div>
+
+  <div class="columns">
+    <div class="column" id="nyheter">
+      <h2>Nyheter</h2>
+      <a href="https://www.vg.no" target="_blank">VG</a>
+      <a href="https://www.nrk.no" target="_blank">NRK</a>
+      <a href="https://www.aftenposten.no" target="_blank">Aftenposten</a>
+    </div>
+    <div class="column" id="sosialt">
+      <h2>Sosialt</h2>
+      <a href="https://www.reddit.com" target="_blank">Reddit</a>
+      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    </div>
+    <div class="column" id="underholdning">
+      <h2>Underholdning</h2>
+      <a href="https://www.youtube.com" target="_blank">YouTube</a>
+      <a href="https://www.netflix.com" target="_blank">Netflix</a>
+      <a href="https://www.spotify.com" target="_blank">Spotify</a>
+    </div>
+    <div class="column" id="verktoy">
+      <h2>Verktøy</h2>
+      <a href="https://calendar.google.com" target="_blank">Google Kalender</a>
+      <a href="https://drive.google.com" target="_blank">Google Drive</a>
+      <a href="https://notion.so" target="_blank">Notion</a>
+    </div>
+  </div>
+
+  <div class="footer">Startside laget av Anders · Oppdatert 2025</div>
+
+  <div class="easter-egg" onclick="showEasterEgg()">🐻</div>
+
+  <audio id="retroMusic" loop>
+    <source src="https://archive.org/download/Cybernoid2Theme/Cybernoid2Theme.mp3" type="audio/mpeg">
+    Din nettleser støtter ikke lyd.
+  </audio>
+
+  <div class="retro-audio-toggle" onclick="toggleMusic()">🔊 Lyd av/på</div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+      localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
+    }
+
+    function applyStoredTheme() {
+      const stored = localStorage.getItem('theme');
+      if (stored === 'light') {
+        document.body.classList.add('light');
+      }
+    }
+
+    function showEasterEgg() {
+      alert("Snipp, snapp, snute, så var easter egget ute!");
+    }
+
+    async function fetchWeather() {
+      try {
+        const res = await fetch("https://wttr.in/?format=%C+%t+in+%l");
+        const text = await res.text();
+        document.getElementById("weather").innerText = text;
+      } catch (err) {
+        document.getElementById("weather").innerText = "Kunne ikke hente værdata.";
+      }
+    }
+
+    function updateClock() {
+      const now = new Date();
+      const clock = document.getElementById("clock");
+      clock.textContent = now.toLocaleTimeString('no-NO', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+    }
+
+    function handleShortcuts(e) {
+      if (e.altKey) {
+        const key = e.key.toLowerCase();
+        if (key === 'n') document.getElementById('nyheter').scrollIntoView();
+        if (key === 's') document.getElementById('sosialt').scrollIntoView();
+        if (key === 'u') document.getElementById('underholdning').scrollIntoView();
+        if (key === 'v') document.getElementById('verktoy').scrollIntoView();
+      }
+
+      if (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'r') {
+        document.body.classList.toggle('retro');
+        const music = document.getElementById('retroMusic');
+        if (document.body.classList.contains('retro')) {
+          music.play();
+          alert("Retro-modus aktivert!");
+        } else {
+          music.pause();
+        }
+      }
+    }
+
+    function toggleMusic() {
+      const music = document.getElementById('retroMusic');
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
+
+    applyStoredTheme();
+    fetchWeather();
+    updateClock();
+    setInterval(updateClock, 1000);
+    document.addEventListener('keydown', handleShortcuts);
+  </script>
+</body>
+</html>
