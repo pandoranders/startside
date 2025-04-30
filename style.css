@@ -189,6 +189,31 @@ a:focus {
     display: none;
 }
 
+.sparkle {
+  position: absolute;
+  bottom: 25px;
+  right: 0;
+  font-size: 1rem;
+  opacity: 0;
+  animation: sparkleAnim 0.8s ease-out forwards;
+  pointer-events: none;
+}
+
+@keyframes sparkleAnim {
+  0% {
+    transform: translateY(0) scale(0.5);
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.2);
+  }
+  100% {
+    transform: translateY(-30px) scale(0.8);
+    opacity: 0;
+  }
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
