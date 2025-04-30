@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Anders sin Startside</title>
   <style>
     :root {
@@ -32,13 +32,13 @@
     h1 {
       text-align: center;
       font-size: 3rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
 
-    .clock {
+    #clock {
       text-align: center;
       font-size: 1.5rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
     .columns {
@@ -108,49 +108,49 @@
       font-size: 1.2rem;
     }
 
-    /* Retro-effekter */
+    /* Retro-modus */
+    body.retro {
+      background: black;
+      color: #00FF88;
+      font-family: 'Courier New', monospace;
+      position: relative;
+    }
+
     body.retro::before {
       content: "";
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: repeating-linear-gradient(
-        transparent,
-        transparent 2px,
-        rgba(0, 0, 0, 0.05) 3px,
-        rgba(0, 0, 0, 0.05) 4px
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: repeating-linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.05) 1px,
+        transparent 1px,
+        transparent 4px
       );
       pointer-events: none;
       z-index: 999;
     }
 
-    .retro-audio-toggle {
-      position: fixed;
-      bottom: 10px;
-      left: 10px;
-      background: var(--bg-color);
-      color: var(--text-color);
-      border: 1px solid var(--text-color);
-      border-radius: 5px;
-      padding: 0.3rem 0.6rem;
-      font-size: 0.9rem;
-      cursor: pointer;
-      z-index: 1000;
+    audio {
       display: none;
-    }
-
-    body.retro .retro-audio-toggle {
-      display: block;
     }
   </style>
 </head>
 <body>
-  <div class="toggle-container" onclick="toggleTheme()">Bytt tema</div>
+  <div class="toggle-container" onclick="toggleTheme()">
+    Bytt tema
+  </div>
 
   <h1>Velkommen til Anders sin Startside</h1>
 
-  <div class="clock" id="clock">Klokka lastes inn...</div>
+  <div id="clock">00:00:00</div>
 
-  <div class="weather" id="weather">Laster inn værdata...</div>
+  <div class="weather" id="weather">
+    Laster inn værdata...
+  </div>
 
   <div class="columns">
     <div class="column" id="nyheter">
@@ -179,28 +179,21 @@
     </div>
   </div>
 
-  <div class="footer">Startside laget av Anders · Oppdatert 2025</div>
+  <div class="footer">
+    Startside laget av Anders · Oppdatert 2025
+  </div>
 
-  <div class="easter-egg" onclick="showEasterEgg()">🐻</div>
+  <div class="easter-egg" onclick="showEasterEgg()">
+    🐻
+  </div>
 
   <audio id="retroMusic" loop>
-    <source src="https://archive.org/download/Cybernoid2Theme/Cybernoid2Theme.mp3" type="audio/mpeg">
-    Din nettleser støtter ikke lyd.
+    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Kevin_MacLeod/Chiptune_Kevin_MacLeod/Chiptune_-_Kevin_MacLeod_-_Cipher.mp3" type="audio/mpeg">
   </audio>
-
-  <div class="retro-audio-toggle" onclick="toggleMusic()">🔊 Lyd av/på</div>
 
   <script>
     function toggleTheme() {
       document.body.classList.toggle('light');
-      localStorage.setItem('theme', document.body.classList.contains('light') ? 'light' : 'dark');
-    }
-
-    function applyStoredTheme() {
-      const stored = localStorage.getItem('theme');
-      if (stored === 'light') {
-        document.body.classList.add('light');
-      }
     }
 
     function showEasterEgg() {
@@ -219,20 +212,31 @@
 
     function updateClock() {
       const now = new Date();
-      const clock = document.getElementById("clock");
-      clock.textContent = now.toLocaleTimeString('no-NO', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      const seconds = String(now.getSeconds()).padStart(2, '0');
+      document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
     }
 
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    document.addEventListener('keydown', handleShortcuts);
+
     function handleShortcuts(e) {
-      if (e.altKey) {
-        const key = e.key.toLowerCase();
-        if (key === 'n') document.getElementById('nyheter').scrollIntoView();
-        if (key === 's') document.getElementById('sosialt').scrollIntoView();
-        if (key === 'u') document.getElementById('underholdning').scrollIntoView();
-        if (key === 'v') document.getElementById('verktoy').scrollIntoView();
+      const key = e.key.toLowerCase();
+
+      // Seksjonssnarveier (Alt eller Cmd/Meta)
+      if ((e.altKey || e.metaKey) && !e.ctrlKey) {
+        if (key === 'n') document.getElementById('nyheter').scrollIntoView({ behavior: 'smooth' });
+        if (key === 's') document.getElementById('sosialt').scrollIntoView({ behavior: 'smooth' });
+        if (key === 'u') document.getElementById('underholdning').scrollIntoView({ behavior: 'smooth' });
+        if (key === 'v') document.getElementById('verktoy').scrollIntoView({ behavior: 'smooth' });
       }
 
-      if (e.ctrlKey && e.altKey && e.key.toLowerCase() === 'r') {
+      // Retro-modus: Ctrl+Alt+R (Windows) eller Cmd+R (Mac)
+      if ((e.ctrlKey && e.altKey && key === 'r') || (e.metaKey && key === 'r')) {
+        e.preventDefault(); // Forhindrer reload på Cmd+R
         document.body.classList.toggle('retro');
         const music = document.getElementById('retroMusic');
         if (document.body.classList.contains('retro')) {
@@ -244,20 +248,7 @@
       }
     }
 
-    function toggleMusic() {
-      const music = document.getElementById('retroMusic');
-      if (music.paused) {
-        music.play();
-      } else {
-        music.pause();
-      }
-    }
-
-    applyStoredTheme();
     fetchWeather();
-    updateClock();
-    setInterval(updateClock, 1000);
-    document.addEventListener('keydown', handleShortcuts);
   </script>
 </body>
 </html>
