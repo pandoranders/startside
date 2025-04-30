@@ -191,64 +191,60 @@
     <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Kevin_MacLeod/Chiptune_Kevin_MacLeod/Chiptune_-_Kevin_MacLeod_-_Cipher.mp3" type="audio/mpeg">
   </audio>
 
-  <script>
-    function toggleTheme() {
-      document.body.classList.toggle('light');
-    }
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle('light');
+  }
 
-    function showEasterEgg() {
-      alert("Snipp, snapp, snute, så var easter egget ute!");
-    }
+  function showEasterEgg() {
+    alert("Snipp, snapp, snute, så var easter egget ute!");
+  }
 
-    async function fetchWeather() {
-      try {
-        const res = await fetch("https://wttr.in/?format=%C+%t+in+%l");
-        const text = await res.text();
-        document.getElementById("weather").innerText = text;
-      } catch (err) {
-        document.getElementById("weather").innerText = "Kunne ikke hente værdata.";
+  async function fetchWeather() {
+    try {
+      const res = await fetch("https://wttr.in/?format=%C+%t+in+%l");
+      const text = await res.text();
+      document.getElementById("weather").innerText = text;
+    } catch (err) {
+      document.getElementById("weather").innerText = "Kunne ikke hente værdata.";
+    }
+  }
+
+  function updateClock() {
+    const now = new Date();
+    const hours = String(now.getHours()).padStart(2, '0');
+    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const seconds = String(now.getSeconds()).padStart(2, '0');
+    document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+  }
+
+  setInterval(updateClock, 1000);
+  updateClock();
+  fetchWeather();
+
+  document.addEventListener('keydown', function (e) {
+    const key = e.key.toLowerCase();
+
+    if (key === 'n') {
+      document.getElementById('nyheter').scrollIntoView({ behavior: 'smooth' });
+    } else if (key === 's') {
+      document.getElementById('sosialt').scrollIntoView({ behavior: 'smooth' });
+    } else if (key === 'u') {
+      document.getElementById('underholdning').scrollIntoView({ behavior: 'smooth' });
+    } else if (key === 'v') {
+      document.getElementById('verktoy').scrollIntoView({ behavior: 'smooth' });
+    } else if (key === 'r') {
+      document.body.classList.toggle('retro');
+      const music = document.getElementById('retroMusic');
+      if (document.body.classList.contains('retro')) {
+        music.play();
+        alert("Retro-modus aktivert!");
+      } else {
+        music.pause();
       }
     }
+  });
+</script>
 
-    function updateClock() {
-      const now = new Date();
-      const hours = String(now.getHours()).padStart(2, '0');
-      const minutes = String(now.getMinutes()).padStart(2, '0');
-      const seconds = String(now.getSeconds()).padStart(2, '0');
-      document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-    }
-
-    setInterval(updateClock, 1000);
-    updateClock();
-
-    document.addEventListener('keydown', handleShortcuts);
-
-    function handleShortcuts(e) {
-      const key = e.key.toLowerCase();
-
-      // Seksjonssnarveier (Alt eller Cmd/Meta)
-      if ((e.altKey || e.metaKey) && !e.ctrlKey) {
-        if (key === 'n') document.getElementById('nyheter').scrollIntoView({ behavior: 'smooth' });
-        if (key === 's') document.getElementById('sosialt').scrollIntoView({ behavior: 'smooth' });
-        if (key === 'u') document.getElementById('underholdning').scrollIntoView({ behavior: 'smooth' });
-        if (key === 'v') document.getElementById('verktoy').scrollIntoView({ behavior: 'smooth' });
-      }
-
-      // Retro-modus: Ctrl+Alt+R (Windows) eller Cmd+R (Mac)
-      if ((e.ctrlKey && e.altKey && key === 'r') || (e.metaKey && key === 'r')) {
-        e.preventDefault(); // Forhindrer reload på Cmd+R
-        document.body.classList.toggle('retro');
-        const music = document.getElementById('retroMusic');
-        if (document.body.classList.contains('retro')) {
-          music.play();
-          alert("Retro-modus aktivert!");
-        } else {
-          music.pause();
-        }
-      }
-    }
-
-    fetchWeather();
-  </script>
 </body>
 </html>
