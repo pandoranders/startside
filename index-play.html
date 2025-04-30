@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Anders sin Startside</title>
   <style>
     :root {
@@ -17,6 +17,31 @@
       --text-color: #111;
       --link-color: #6A0DAD;
       --link-hover: #9B30FF;
+    }
+
+    body.retro {
+      background: black !important;
+      color: #33FF00 !important;
+    }
+
+    body.retro a {
+      color: #FF00FF !important;
+    }
+
+    body.retro .scanlines::after {
+      content: "";
+      pointer-events: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: repeating-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+      z-index: 9999;
     }
 
     body {
@@ -37,7 +62,7 @@
 
     #clock {
       text-align: center;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       margin-bottom: 2rem;
     }
 
@@ -80,9 +105,10 @@
       bottom: 10px;
       right: 10px;
       cursor: pointer;
-      font-size: 1.2rem;
-      opacity: 0.6;
+      font-size: 1.8rem;
+      opacity: 0.8;
       transition: opacity 0.3s ease;
+      z-index: 10000;
     }
 
     .easter-egg:hover {
@@ -100,6 +126,7 @@
       border-radius: 5px;
       cursor: pointer;
       user-select: none;
+      z-index: 10001;
     }
 
     .weather {
@@ -108,70 +135,63 @@
       font-size: 1.2rem;
     }
 
-    /* Retro-modus */
-    body.retro {
-      background: black;
-      color: #00FF88;
-      font-family: 'Courier New', monospace;
-      position: relative;
-    }
-
-    body.retro::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: repeating-linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0.05),
-        rgba(255, 255, 255, 0.05) 1px,
-        transparent 1px,
-        transparent 4px
-      );
+    .sparkle {
+      position: absolute;
+      bottom: 25px;
+      right: 0;
+      font-size: 1rem;
+      opacity: 0;
+      animation: sparkleAnim 0.8s ease-out forwards;
       pointer-events: none;
-      z-index: 999;
     }
 
-    audio {
-      display: none;
+    @keyframes sparkleAnim {
+      0% {
+        transform: translateY(0) scale(0.5);
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.2);
+      }
+      100% {
+        transform: translateY(-30px) scale(0.8);
+        opacity: 0;
+      }
     }
   </style>
 </head>
-<body>
+<body class="scanlines">
   <div class="toggle-container" onclick="toggleTheme()">
     Bytt tema
   </div>
 
   <h1>Velkommen til Anders sin Startside</h1>
 
-  <div id="clock">00:00:00</div>
+  <div id="clock">Laster klokke...</div>
 
-  <div class="weather" id="weather">
-    Laster inn værdata...
-  </div>
+  <div class="weather" id="weather">Laster inn værdata...</div>
 
   <div class="columns">
-    <div class="column" id="nyheter">
+    <div class="column">
       <h2>Nyheter</h2>
       <a href="https://www.vg.no" target="_blank">VG</a>
       <a href="https://www.nrk.no" target="_blank">NRK</a>
       <a href="https://www.aftenposten.no" target="_blank">Aftenposten</a>
     </div>
-    <div class="column" id="sosialt">
+    <div class="column">
       <h2>Sosialt</h2>
       <a href="https://www.reddit.com" target="_blank">Reddit</a>
       <a href="https://www.instagram.com" target="_blank">Instagram</a>
       <a href="https://www.facebook.com" target="_blank">Facebook</a>
     </div>
-    <div class="column" id="underholdning">
+    <div class="column">
       <h2>Underholdning</h2>
       <a href="https://www.youtube.com" target="_blank">YouTube</a>
       <a href="https://www.netflix.com" target="_blank">Netflix</a>
       <a href="https://www.spotify.com" target="_blank">Spotify</a>
     </div>
-    <div class="column" id="verktoy">
+    <div class="column">
       <h2>Verktøy</h2>
       <a href="https://calendar.google.com" target="_blank">Google Kalender</a>
       <a href="https://drive.google.com" target="_blank">Google Drive</a>
@@ -183,68 +203,79 @@
     Startside laget av Anders · Oppdatert 2025
   </div>
 
-  <div class="easter-egg" onclick="showEasterEgg()">
-    🐻
-  </div>
+  <div id="easterEgg" class="easter-egg" onclick="showEasterEgg()">🐻<span id="sparkle" class="sparkle">✨</span></div>
 
   <audio id="retroMusic" loop>
-    <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Kevin_MacLeod/Chiptune_Kevin_MacLeod/Chiptune_-_Kevin_MacLeod_-_Cipher.mp3" type="audio/mpeg">
+    <source src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Tetris_theme.ogg" type="audio/ogg">
   </audio>
 
-<script>
-  function toggleTheme() {
-    document.body.classList.toggle('light');
-  }
-
-  function showEasterEgg() {
-    alert("Snipp, snapp, snute, så var easter egget ute!");
-  }
-
-  async function fetchWeather() {
-    try {
-      const res = await fetch("https://wttr.in/?format=%C+%t+in+%l");
-      const text = await res.text();
-      document.getElementById("weather").innerText = text;
-    } catch (err) {
-      document.getElementById("weather").innerText = "Kunne ikke hente værdata.";
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('light');
     }
-  }
 
-  function updateClock() {
-    const now = new Date();
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
-    const seconds = String(now.getSeconds()).padStart(2, '0');
-    document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-  }
+    function showEasterEgg() {
+      const egg = document.getElementById('easterEgg');
+      const sparkle = document.getElementById('sparkle');
 
-  setInterval(updateClock, 1000);
-  updateClock();
-  fetchWeather();
-
-  document.addEventListener('keydown', function (e) {
-    const key = e.key.toLowerCase();
-
-    if (key === 'n') {
-      document.getElementById('nyheter').scrollIntoView({ behavior: 'smooth' });
-    } else if (key === 's') {
-      document.getElementById('sosialt').scrollIntoView({ behavior: 'smooth' });
-    } else if (key === 'u') {
-      document.getElementById('underholdning').scrollIntoView({ behavior: 'smooth' });
-    } else if (key === 'v') {
-      document.getElementById('verktoy').scrollIntoView({ behavior: 'smooth' });
-    } else if (key === 'r') {
-      document.body.classList.toggle('retro');
-      const music = document.getElementById('retroMusic');
-      if (document.body.classList.contains('retro')) {
-        music.play();
-        alert("Retro-modus aktivert!");
+      if (egg.innerText.includes('🐻')) {
+        egg.innerHTML = '🦄<span id="sparkle" class="sparkle">✨</span>';
       } else {
-        music.pause();
+        egg.innerHTML = '🐻<span id="sparkle" class="sparkle">✨</span>';
+      }
+
+      // Trigger sparkle animasjon
+      const newSparkle = egg.querySelector('#sparkle');
+      newSparkle.classList.remove('sparkle');
+      void newSparkle.offsetWidth;
+      newSparkle.classList.add('sparkle');
+
+      alert("Snipp, snapp, snute, så var easter egget ute!");
+    }
+
+    async function fetchWeather() {
+      try {
+        const res = await fetch("https://wttr.in/?format=%C+%t+in+%l");
+        const text = await res.text();
+        document.getElementById("weather").innerText = text;
+      } catch (err) {
+        document.getElementById("weather").innerText = "Kunne ikke hente værdata.";
       }
     }
-  });
-</script>
 
+    function updateClock() {
+      const now = new Date();
+      const clock = document.getElementById("clock");
+      clock.innerText = now.toLocaleTimeString("no-NO");
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+    fetchWeather();
+
+    let retroActive = false;
+
+    document.addEventListener('keydown', (e) => {
+      const key = e.key.toLowerCase();
+
+      if (key === 'r') {
+        retroActive = !retroActive;
+        document.body.classList.toggle('retro', retroActive);
+
+        const music = document.getElementById('retroMusic');
+        if (retroActive) {
+          music.play();
+        } else {
+          music.pause();
+          music.currentTime = 0;
+        }
+      }
+
+      if (key === 'n') window.open("https://www.vg.no", "_blank");
+      if (key === 's') window.open("https://www.reddit.com", "_blank");
+      if (key === 'u') window.open("https://www.youtube.com", "_blank");
+      if (key === 'v') window.open("https://calendar.google.com", "_blank");
+    });
+  </script>
 </body>
 </html>
