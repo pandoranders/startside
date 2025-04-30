@@ -164,24 +164,6 @@ a:focus {
     right: 0;
 }
 
-.gfx-1 {
-    position: fixed;
-    width: 15px;
-    height: 50px;
-    background: #AF443c;
-    bottom: 100px;
-    left: 100px;
-}
-
-.gfx-2 {
-    position: fixed;
-    height: 15px;
-    width: 50px;
-    background: #AF443c;
-    bottom: 100px;
-    left: 100px;
-}
-
 .google-search {
     width: 510px;
     margin-bottom: 30px;
