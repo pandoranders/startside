@@ -191,8 +191,8 @@ a:focus {
 
 .sparkle {
   position: absolute;
-  bottom: 25px;
-  right: 0;
+  bottom: 10px;
+  right: 10px;
   font-size: 1rem;
   opacity: 0;
   animation: sparkleAnim 0.8s ease-out forwards;
