@@ -170,7 +170,7 @@ a:focus {
     height: 50px;
     background: #AF443c;
     bottom: 100px;
-    right: 100px;
+    left: 100px;
 }
 
 .gfx-2 {
@@ -179,7 +179,7 @@ a:focus {
     width: 50px;
     background: #AF443c;
     bottom: 100px;
-    right: 100px;
+    left: 100px;
 }
 
 .google-search {
