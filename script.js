@@ -18,3 +18,20 @@ function iwmacKey() {
    var element = document.body;
    element.classList.toggle("iwmac-key");
 }
+
+function showEasterEgg() {
+    const egg = document.getElementById('easterEgg');
+    const sparkle = document.getElementById('sparkle');
+    
+    if (egg.innerText.includes('🐻')) {
+    egg.innerHTML = '🦄<span id="sparkle" class="sparkle">✨</span>';
+    } else {
+    egg.innerHTML = '🐻<span id="sparkle" class="sparkle">✨</span>';
+    }
+    
+    // Trigger sparkle animasjon
+    const newSparkle = egg.querySelector('#sparkle');
+    newSparkle.classList.remove('sparkle');
+    void newSparkle.offsetWidth;
+    newSparkle.classList.add('sparkle');
+}
