@@ -132,7 +132,7 @@ a:focus {
 .content {
     justify-content: center;
     max-width: 1980px;
-    padding: 30px 100px 0 100px;
+    padding: 16px 100px 0 100px;
     margin: 0 auto;
     width: 80%;
 }
