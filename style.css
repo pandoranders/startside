@@ -88,29 +88,22 @@ a:focus {
     font-size: 24px;
 }
 
-/* Spesialeffekt for .ai */
 .small a.ai {
     position: relative;
-    z-index: 1;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
-/* Fancy blink når du hovrer over ChatGPT-lenken */
 .small a.ai:hover {
-    animation: fancyBlink 1.2s infinite;
-    color: #fff; /* gjør teksten lysere for kontrast */
-    text-shadow: 0 0 5px #FF9D0A, 0 0 10px #FF9D0A, 0 0 20px #FF9D0A;
+    animation: bgBlink 1.2s infinite;
 }
 
-/* Blink-animasjon */
-@keyframes fancyBlink {
+/* Animasjon for blinkende bakgrunn */
+@keyframes bgBlink {
     0%, 100% {
-        opacity: 1;
-        text-shadow: 0 0 5px #FF9D0A, 0 0 10px #FF9D0A, 0 0 20px #FF9D0A;
+        background-color: #AF443C; /* original bakgrunn */
     }
     50% {
-        opacity: 0.6;
-        text-shadow: 0 0 2px #FF9D0A, 0 0 4px #FF9D0A;
+        background-color: #FF9D0A; /* blinkefarge – f.eks. oransje */
     }
 }
 
