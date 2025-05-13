@@ -94,16 +94,15 @@ a:focus {
 }
 
 .small a.ai:hover {
-    animation: bgBlink 1.2s infinite;
+    animation: bgBlink .5s infinite;
 }
 
-/* Animasjon for blinkende bakgrunn */
 @keyframes bgBlink {
     0%, 100% {
-        background-color: #AF443C; /* original bakgrunn */
+        background-color: #AF443C; 
     }
     50% {
-        background-color: #FF9D0A; /* blinkefarge – f.eks. oransje */
+        background-color: #D2584F; 
     }
 }
 
