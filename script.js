@@ -41,6 +41,4 @@ document.addEventListener('keydown', (e) => {
    if (key === 'c') window.open("https://chatgpt.com","_self");
    if (key === 's') showEasterEgg(); 
    if (key === 'e') window.open("https://mail.one.com","_self");
-   if (e.key === 'Escape') bossKey();  
-
  });
