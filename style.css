@@ -81,7 +81,9 @@ a:focus {
 
 .small a {
     background: #AF443c;
+    display: inline-block;
     color: #241736;
+    vertical-align: middle;
     margin: 0;
     text-transform: uppercase;
     padding: 2px 8px;
@@ -173,8 +175,7 @@ a:focus {
   }
 }
 .ai {
-  display: inline-block;
-  vertical-align: middle;
+
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
