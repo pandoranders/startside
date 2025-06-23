@@ -174,21 +174,11 @@ a:focus {
     transform: translateX(-1px) rotate(0);
   }
 }
-.ai {
 
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
 .ai:hover, .ai:focus, .ai:active {
-  -webkit-animation-name: buzz-out-on-hover;
-  animation-name: buzz-out-on-hover;
-  -webkit-animation-duration: 0.75s;
-  animation-duration: 0.75s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: 1;
-  animation-iteration-count: 1;
+    background: radial-gradient(#2A113B, #1B1435, #2F1739, #2A113B);
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
 }
 
 .fixed-elements {
