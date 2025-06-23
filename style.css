@@ -90,9 +90,13 @@ a:focus {
     font-size: 24px;
 }
 
+.ai {
+     transition: all 0s;
+}
+
 .ai:hover, .ai:focus, .ai:active {
-    background: linear-gradient(90deg, #2A113B, #1B1435, #2F1739, #2A113B);
-    animation: gradient 3s ease infinite;
+    background: linear-gradient(90deg, #2A113B, #8F393B, #2F1739, #8F393B);
+    animation: gradient 2.5s ease infinite;
 }
 
 .fixed-elements {
