@@ -95,7 +95,7 @@ a:focus {
 }
 
 .ai:hover, .ai:focus, .ai:active {
-    background: linear-gradient(90deg, #C94E45, #8F393B, #C94E45, #8F393B);
+    background: linear-gradient(90deg, #D9544A, #8F393B, #D9544A);
     background-size: 400% 400%;
     animation: gradient 2.5s ease infinite;
 }
