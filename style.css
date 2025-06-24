@@ -97,7 +97,7 @@ a:focus {
 .ai:hover, .ai:focus, .ai:active {
     background: linear-gradient(90deg, #8F393B, #E5594F, #8F393B);
     background-size: 400% 400%;
-    animation: gradient 2.5s ease infinite;
+    animation: gradient 1.5s ease infinite;
 }
 
 .fixed-elements {
