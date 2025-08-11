@@ -24,7 +24,7 @@ function showEasterEgg() {
     const sparkle = document.getElementById('sparkle');
     
     if (egg.innerText.includes('🐻')) {
-    egg.innerHTML = '🦄<span id="sparkle" class="sparkle">✨</span>';
+    egg.innerHTML = '🐻<span id="sparkle" class="sparkle">✨</span>';
     } else {
     egg.innerHTML = '🐻<span id="sparkle" class="sparkle">✨</span>';
     }
