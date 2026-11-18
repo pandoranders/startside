@@ -90,6 +90,10 @@ a:focus {
     font-size: 24px;
 }
 
+a.opacity-100 {
+    opacity: 1;
+}
+
 .ai {
      transition: all 0s;
 }
