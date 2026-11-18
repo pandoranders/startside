@@ -21,19 +21,17 @@ function iwmacKey() {
 
 function showEasterEgg() {
     const egg = document.getElementById('easterEgg');
-    const sparkle = document.getElementById('sparkle');
-    
+
     if (egg.innerText.includes('🐻')) {
-    egg.innerHTML = '🦄<span id="sparkle" class="sparkle">✨</span>';
+        egg.innerHTML = '🦄<span class="sparkle">✨</span>';
     } else {
-    egg.innerHTML = '🐻<span id="sparkle" class="sparkle">✨</span>';
+        egg.innerHTML = '🐻<span class="sparkle">✨</span>';
     }
-    
-    // Trigger sparkle animasjon
-    const newSparkle = egg.querySelector('#sparkle');
-    newSparkle.classList.remove('sparkle');
-    void newSparkle.offsetWidth;
-    newSparkle.classList.add('sparkle');
+
+    const sparkle = egg.querySelector('.sparkle');
+    sparkle.classList.remove('sparkle');
+    void sparkle.offsetWidth;
+    sparkle.classList.add('sparkle');
 }
 
 document.addEventListener('keydown', (e) => {
